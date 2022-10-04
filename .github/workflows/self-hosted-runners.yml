@@ -16,12 +16,3 @@ jobs:
       - name: Say hello from self-hosted linux runner
         run: |
           echo "Hello ${{ github.event.inputs.name }}, from self-hosted linux runner!"
-
-  say_hello_windows:
-    name: Say Hello from Windows Self-Hosted Runner
-    runs-on: [self-hosted, windows, x64, self-hosted-windows]
-    needs: say_hello_linux
-    steps:
-      - name: Say hello from self-hosted windows runner
-        run: |
-          echo "Hello ${{ github.event.inputs.name }}, from self-hosted windows runner!"
